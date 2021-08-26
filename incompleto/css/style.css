@@ -1,0 +1,71 @@
+* , html{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: rgba(255, 190, 118,1.0);
+}
+header{
+	width: 100%;
+}
+
+.cabecalho{
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+	background-color: #34495e;
+	position: relative;
+	top: 2rem;
+}
+
+
+h1{
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: .5rem;
+	font-size: 2em;
+}
+
+nav{
+	display: flex;
+	gap: 1rem;
+}
+
+ul{
+		padding-top: 4rem;
+}
+
+li{
+	list-style: none;
+	margin: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+a{
+	text-decoration: none;
+	color: #ecf0f1;
+	font-family: 'Ubuntu Mono', monospace;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-size: 1.2em;
+}
+
+.slider, figure, img{
+	width: 100%;
+}
+
+p{
+	line-height: 2;
+	letter-spacing: .2rem;
+	width: 80%;
+	margin: auto;
+}
+
+
+.fixed{
+	position: fixed;
+	top: 0;
+}

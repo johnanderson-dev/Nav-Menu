@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Menu Mobile - HTML, CSS e JavaScript</title>
+</head>
+
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+
+ <header id="header">
+   <a id="logo" href="">Logo</a>
+    <nav id="nav">
+       <button id="btn-mobile">Menu
+                
+                <!-- A tag SPAN irá conter as barras que formarão o menu hamburger 
+                  , porém esse conteudo só sera adicionado via CSS.-->
+          <span id="hamburger"></span>
+
+       </button>
+          <ul id="menu">
+            <li>
+              <a href="/">
+               Sobre
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                Produtos
+               </a>
+            </li>
+            <li>
+              <a href="/">
+                Portifólio
+               </a>
+            </li>
+            <li>
+               <a href="/">
+                  Contatos
+                </a>
+            </li>
+     </ul>
+   </nav>
+</header>
+
+
+<script> 
+
+const btnMobile = document.getElementById('btn-mobile');
+
+ /*
+ 
+    btnMobile.addEventListener('click' , toggleMenu)
+    Informa que ao clicar no id btnMobile irá fazer 
+    a ação definida na function toggleMenu
+
+ */
+
+btnMobile.addEventListener('click' , toggleMenu)
+
+ /*
+ 
+    btnMobile.addEventListener('touchstart' , toggleMenu)
+    Se referi ao evento de tocar em um objeto
+    que irá dimuir o tempo de resposta ao clicar 
+ */
+
+ /*
+
+btnMobile.addEventListener('touchstart' , toggleMenu)
+
+*/
+
+function toggleMenu() {
+
+/*
+   if(event.type === 'touchstart')event.preventDefalult();
+*/  
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+
+    /*
+      Com classList.toggle eu estou impondo uma condição 
+      que quando houver uma classe ela é removida, 
+      se não houver a classe ela é adicionada.
+      Como pode ver eu determinei que o nome da classe seria .active
+      como ela não está adicionado no documento automaticamente quando clicado no botão ela é adicionado e quando clicado de novo elá é removida
+    */
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

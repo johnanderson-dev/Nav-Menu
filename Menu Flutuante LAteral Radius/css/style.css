@@ -1,0 +1,88 @@
+* , html{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: rgba(255, 190, 118,1.0);
+}
+
+
+header{
+	background-image: url(../img/wal.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 800px;
+	padding: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+h1.logo{
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color:  white;
+	font-family: 'Roboto Mono', monospace;
+	margin-bottom: 2rem;
+}
+
+
+.menu{
+	position: fixed;
+	display: inline-block;
+	height: 80vh;
+}
+
+nav{
+	margin-top: 6rem;
+	background-color: white;
+	border-radius: 50px;
+    padding: 2rem 0;
+}
+
+
+ul{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+    
+}
+
+i{
+	font-size: 1.7em;
+}
+
+li{
+	padding: 1.5rem .7rem;
+	border-radius: 50px;
+	transition: .2s;
+}
+
+li:hover{
+	background-color: rgba(189, 195, 199,.5);
+	transition: .2s;
+
+}
+
+
+.corpo-header{
+	margin-top: 17rem;
+	text-align: center;
+	line-height: 2;
+}
+
+.corpo-header h2{
+	line-height: 4;
+	color: rgba(52, 73, 94,1.0);
+}
+
+
+.corpo-header a{
+	background-color: white;
+	border-radius:  50px;
+	padding: 1rem 1.5rem;
+	font-size: 1.3rem;
+	color: rgba(44, 62, 80,1.0);
+}

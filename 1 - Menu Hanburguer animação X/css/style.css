@@ -1,0 +1,124 @@
+body, ul{
+  margin: 0;
+  padding:0;
+}
+
+a{
+  color: black; 
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a:hover{
+  background: rgba(0,0,0 .05);
+}
+
+#logo{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: #e7e7e7;
+}
+
+#menu{
+  display:flex;
+  list-style: none;
+  gap: .5rem;
+}
+
+#menu a{
+  display: block;
+  padding: .5rem;
+}
+
+#btn-mobile{
+  display: none;
+}
+
+@media (max-width: 600px){
+ 
+  /*
+     com essas configurações do #menu quando a tela atingir o tamanho de 600px 
+     pra baixo erá ser aplicado 
+  */
+
+  #menu{
+    display: block;     /* faz com que cada li ocupe 100% e fique um abaixo do outro */
+    position: absolute; /* Faz com que o #menu use flutue e use o topo como referencia */
+    width: 100%;        /* Ocupe 100% da página */
+    top:  70px;         /* Fique 70px de distancia do topo */
+    right: 0;           /* Fique 0px da direita da página */
+    background:  #e7e7e7; /*Cor de Fundo*/
+    height: 0px;          /* Informo que o tamanho elemento terá 0 de tamanho para que futuramente eu possa aplicar um efeito de elemento descendo para outros tamanhos */
+    z-index: 1000;        /* Indico que o menu ficará na frente de todos os elementos */
+    visibility: hidden;   /* Informe que ele ira fica invisivel */
+    overflow-y: hidden;   /*  Conteudo no eixo Y ão irá conter rolagem*/
+    transition: .6s;      /* Que todos elementos acima ser´~ao aplicados em um delay de .6 segundos */
+  }
+
+  #nav.active #menu{
+    height: calc(100vh - 70px); /* Quando o height é setado apenas com 100 vh ele irá somar o top: 70 px mais o 100vh da página toda, ficando com mais do tamanho da página toda. Por isso é feito a diminuição -70px para que fica no tamanho certo */
+    visibility: visible;        /* visibilidade visivel  */
+    overflow-y: auto;           /* Conteudo interno irá conter uma rolagem se necessario */
+  }
+  
+  #menu a{
+    padding: 1rem 0;           /*Aqui informa que irá o Link do menu terá um espaçamento interno de 1rem pracima pra baixo e 0 pra esquera e direita*/
+    margin: 0 1rem;             /*Aqui informa que irá o Link do menu terá um espaçamento externo de 1rem pracima pra baixo e 0 pra esquera e direita*/
+    border-bottom: 2px solid rgba(0, 0, 0, .05); /*Aqui informo que o link do menu terá uma borda inferior */
+  }
+
+  /*Aqui inform o que button que será clicado para abrir o meunu no tamanho resposivo*/
+
+   #btn-mobile{
+    display: flex;         /* Informo que a tag button vai deixar seus alementos internos um do lado do outro */  
+    padding: .5rem 1rem;   /* Informo que irá ter um espaçamento interno de 0,5 rem para cima e para baixo e  de 1 rem para esquerda e para direita */
+    font-size: 1em;       /* Um tamanho de font de 1em */
+    border: none;         /* Sem borda  */ 
+    cursor:  pointer;     /* Mouse em formato de mão  */
+    gap:  .5rem;          /* Esse comando só ativado com o Display Flex e dar espaçamento entre os items */
+  }
+
+   /* Aqui começa o primeiro do traço do menu em formato de hamburguer */
+
+  #hamburger{
+     border-top: 2px solid;    /* O Span vazio terá uma borda que irá dar a ideia de traço */
+     width: 20px;              /* O tamanho desse traço será de 20 px  */
+  }
+
+  /* Aqui irá adicionar mais duas barras depois e antes para que fica parecido com hamburguer */
+
+  #hamburger::after, #hamburger::before{
+    content: '';              /* Aqui mostra que tipo de conteudo irá ter, no caso está vazio */
+    display: block;           /* Faz com fique um abaixo do outro */
+    width: 20px;              /* Determinou que a barra terá 20 px de largura  */
+    height: 2px;              /* Determinou que a barra terá 20 px de Altura  */
+    background: currentColor; /* Esse atributo puxa a cor do elemento principal: no caso todos os elemento irão ter a mesma cor do #hamburguer */ 
+    margin-top: 5px;          /* Espçamento do topo de cada é de 5px */
+    transition: .6s;          /* Ira dar o efeito de transição quando os elemento forem clicados  */
+  }
+
+  #nav.active  #hamburger{
+   border-top-color: transparent;  /* Irá fazer com que a cor da borda do #haburguer seja tranparente quando a classe .active existir, com isso quando clicado o codigo irá adicionar a classe de acordo com JS e a barra de cima irá desaparecer deixando só duas  */
+  }
+
+  #nav.active  #hamburger::before{
+    transform: rotate(135deg);    /* Com isso a barra que vem antes irá rotaconar 135 graus quando o #hamburger for clicado */
+  }
+
+  #nav.active  #hamburger::after{ 
+     transform: rotate(-135deg);  /* Com isso a barra que vem depois irá rotacionar 135 graus negativos quando o #hamburger for clicado */
+     position: relative;          /* Position relativo faz com que eu possa usar o Top */
+     top:  -7px;                  /* Foi reduzido a distancia do elemento referente ao top, afim e que os dois elemento ficassem da mesmo altura e pudesse fazer um X */
+  }
+
+}
+

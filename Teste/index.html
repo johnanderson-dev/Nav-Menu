@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Teste</title>
+</head>
+
+<link href='https://use.fontawesome.com/releases/v5.6.1/css/all.css' rel='stylesheet'/>
+<script type="text/javascript">
+    const header = getElmentsByTagName('header')[0];
+const menu = header.offSetTop;
+
+window.onscroll = function(){
+    fixarNoTopo();
+}
+
+function fixarNoTopo(){
+
+     if(window.pageYOffset >= menu){
+         header.classList.add('fixed')
+     }
+
+     else{
+        header.classList.remove('fixed')
+     }
+ }
+</script>
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+ 
+
+  <header>
+
+    <section class="up">
+
+
+      <div class="logo">
+        
+        <h1>Alairtur</h1>
+
+      </div>
+ 
+      
+        <div class="menu">
+
+              <nav>
+                 <ul>
+                  <li>
+                      <a href="">Viagens</a>
+                  </li>
+                  <li>
+                      <a href="">Orçamento</a>
+                  </li>
+                  <li>
+                      <a href="">Planos</a>
+                  </li>
+                  <li>
+                      <a href="">Hotel</a>
+                  </li>
+                  <li>
+                      <a href="">Galeria</a>
+                  </li>
+                  <li>
+                      <a href="">Sobre</a>
+                  </li>
+
+                </ul>
+
+              </nav>
+
+        </div>
+
+        <div class="wrap-icon">
+              
+              <div class="icons">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <div class="icons">
+               <i class="fab fa-instagram"></i>
+              </div>
+              <div class="icons">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+             
+        </div>
+
+        </section>
+
+        <section class="down">
+
+ 
+            <div class="input">
+              <i class="fas fa-search"></i>
+              <input type="text" name="">
+            </div>
+
+          
+        </section>
+
+        <section class="banner">
+
+          <figure class="imagem">
+            <img src="img/wal.png">
+          </figure>
+          
+        </section>
+
+          </header>
+
+
+
+
+</body>
+</html>
