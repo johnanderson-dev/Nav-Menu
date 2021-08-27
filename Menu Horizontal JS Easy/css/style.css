@@ -1,0 +1,63 @@
+hmtl, *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+}
+
+.linhas{
+	display: none;
+}
+
+.linhas p{
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.menu{
+	display: block;
+	width: 100px;
+	height: 100%;
+	background: gray;
+}
+
+.menu-mobile{
+	display: none;
+	width: 100px;
+	height: 100%;
+	background: gray;
+}
+
+.menu a{
+	display block;
+	text-decoration: none;
+}
+
+@media (max-width: 700px){
+    
+    .linhas{
+		display: block;
+	}
+
+
+.menu{
+	display: none;
+	width: 100px;
+	height: 100%;
+	background: gray;
+}
+
+
+.menu-mobile{
+	display: block;
+	width: 100px;
+	height: 100%;
+	background: gray;
+}
+
+
+
+}
